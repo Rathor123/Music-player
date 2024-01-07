@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Balinese&family=Nunito:ital,wght@0,200;0,300;1,400&family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* body {
+    background: url("./moving_background.mp4");
+} */
+
+.Player {
+    width: 35vw;
+    height: 80vh;
+    flex-direction: column;
+    margin: 5vh auto;
+    background-color: rgb(102, 125, 201);
+    border: 1px solid black;
+    border-radius: 5px;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Buttons-Section button :first-child {
+    width: 50px;
+    height: 50px;
+    color: rgb(28, 29, 28);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Player img {
+    width: 20vw;
+    height: 40vh;
+    border-radius: 10px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.Music {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+    font-weight: bold;
+    font-size: 1rem;
+    color: rgb(236, 225, 225);
+}
+
+
+.play :first-child {
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+}
+
+.wrapper {
+    animation: scroll 100s linear infinite;
+    background: url("https://images.unsplash.com/photo-1465146633011-14f8e0781093?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80"),
+        #111111;
+    color: #eee;
+    height: 100vh;
+    min-width: 360px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+}
+
+@keyframes scroll {
+    100% {
+        background-position: 0px -400%;
+    }
 }
